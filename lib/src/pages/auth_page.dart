@@ -1,6 +1,7 @@
 import 'package:firebase_auth_training/src/exceptions/auth_exception.dart';
 import 'package:firebase_auth_training/src/services/auth_service.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
 import 'package:top_snackbar_flutter/top_snack_bar.dart';
@@ -174,6 +175,32 @@ class _AuthPageState extends State<AuthPage> {
                   ),
                 ),
               ),
+              isLogin
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 25, vertical: 10),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          context.read<AuthService>().googleLogin();
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            context.read<AuthService>().isLoading
+                                ? const CircularProgressIndicator()
+                                : const Icon(FontAwesomeIcons.google),
+                            Padding(
+                              padding: const EdgeInsets.all(15),
+                              child: Text(
+                                '$actionButton with Google',
+                                style: const TextStyle(fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  : const SizedBox.shrink(),
               TextButton(
                 onPressed: () => setFormAction(!isLogin),
                 child: Text(toggleButton),

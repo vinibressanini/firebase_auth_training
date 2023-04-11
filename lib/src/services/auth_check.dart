@@ -21,7 +21,7 @@ class _AuthCheckState extends State<AuthCheck> {
       return const Center(
         child: CircularProgressIndicator(),
       );
-    } else if (auth.user == null) {
+    } else if (auth.user == null && auth.googleUser == null) {
       return const AuthPage();
     } else {
       return const HomePage();
