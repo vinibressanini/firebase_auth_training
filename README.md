@@ -1,16 +1,18 @@
 # firebase_auth_training
 
-A new Flutter project.
+Created this simple authentication app because i want to know how to use Firebase Auth + Flutter
 
-## Getting Started
+## Preview
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+https://user-images.githubusercontent.com/91560062/231243607-4b217976-d7ac-4beb-9189-5605ce667d29.mp4
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Technologies that I used
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Dart 2.18.2
+- Flutter 3.3.4
+- FlutterFire 0.2.7
+- Google SignIn 6.1.0
+- Firebase Core 2.9.0
+- Firebase Auth 4.4.0
+- Provider 6.0.5
